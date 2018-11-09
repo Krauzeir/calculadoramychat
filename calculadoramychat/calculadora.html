@@ -1,0 +1,209 @@
+<!-- CALCULAR VALORES E DAR O RETORNO DA QUANTIDADE DE LEADS POR SEGMENTO-->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <script language="javascript" src="_javascript/funcoes.js"> </script>
+	<script>
+        function calc_total(){
+            var qtd = parseInt(document.getElementById('iQuantidade').value);
+            var x = (document.getElementById('iSegmento').value);
+            var total;
+            if(x=='ONG'){
+            	x=100;
+            }
+            if(x=='Varejo'){
+            	x=268;
+            }
+            if(x=='AS'){
+            	x=33;
+            }
+            if(x=='AutP'){
+            	x=423;
+            }
+            if(x=='AutA'){
+            	x=543;
+            }
+            if(x=='EduS'){
+            	x=6;
+            }
+            if(x=='EduP'){
+            	x=7;
+            }
+            if(x=='EduA'){
+            	x=8;
+            }
+            if(x=='EntS'){
+            	x=9;
+            }
+            if(x=='EntP'){
+            	x=10;
+            }
+            if(x=='EntA'){
+            	x=11;
+            }
+            if(x=='FinS'){
+            	x=12;
+            }
+            if(x=='FinP'){
+            	x=13;
+            }
+            if(x=='FinA'){
+            	x=14;
+            }
+            if(x=='SauS'){
+            	x=15;
+            }
+            if(x=='SauP'){
+            	x=13;
+            }
+            if(x=='SauA'){
+            	x=14;
+            }
+            if(x=='RHS'){
+            	x=15;
+            }
+            if(x=='RHP'){
+            	x=16;
+            }
+            if(x=='RHA'){
+            	x=17;
+            }
+            if(x=='TecS'){
+            	x=18;
+            }
+            if(x=='TecP'){
+            	x=19;
+            }
+            if(x=='TecA'){
+            	x=20;
+            }
+            if(x=='MarS'){
+            	x=21;
+            }
+            if(x=='MarP'){
+            	x=22;
+            }
+            if(x=='MarA'){
+            	x=23;
+            }
+            if(x=='MidS'){
+            	x=24;
+            }
+            if(x=='MidP'){
+            	x=25;
+            }
+            if(x=='MidA'){
+            	x=26;
+            }
+            if(x=='ViaS'){
+            	x=27;
+            }
+            if(x=='ViaP'){
+            	x=28;
+            }
+            if(x=='ViaA'){
+            	x=29;
+            }
+            if(x=='ImoS'){
+            	x=30;
+            }
+            if(x=='ImoP'){
+            	x=31;
+            }
+            if(x=='ImoA'){
+            	x=32;
+            }
+            if(x=='ApiS'){
+            	x=33;
+            }
+            if(x=='ApiP'){
+            	x=34;
+            }
+            if(x=='ApiA'){
+            	x=35;
+            }
+            total = (qtd/x);
+            document.getElementById('iTotal').value = total;
+        }
+	</script>
+</head>
+
+
+
+<!-- OPÇÃO DE SEGMENTOS A SEREM ESCOLHIDOS -->
+<!-- "FORMULARIO" PARA MOSTRAR O RESULTADO -->
+<form method="post" id="fContato" action="mailto:brunogox@hotmail.com" oninput="calc_total();">
+<fieldset id="pedido"><legend>Calculadora de Leads</legend>
+	<p><label for="iEstado">Segmento:</label><select name="nSegmento" id="iSegmento">
+                <option value="0">Selecione o Segmento</option>
+                <option value="ONG">ONG</option>
+                <option value="Varejo">Varejo</option>
+                <option value="Outro">Outro</option>
+   <optgroup label="Automotivo">
+                <option value="AutS">Serviço</option>
+                <option value="AutP">Produto</option>
+                <option value="AutA">Serviço e Produto</option>
+   </optgroup>
+   <optgroup label="Educação">
+                <option value="EduS">Serviço</option>
+                <option value="EduP">Produto</option>
+                <option value="EduA">Serviço e Produto</option>
+   </optgroup>
+   <optgroup label="Entreterimento">
+                <option value="EntS">Serviço</option>
+                <option value="EntP">Produto</option>
+                <option value="EntA">Serviço e Produto</option>
+   </optgroup>
+   <optgroup label="Finanças">
+                <option value="FinS">Serviço</option>
+                <option value="FinP">Produto</option>
+                <option value="FinA">Serviço e Produto</option>
+   </optgroup>
+   <optgroup label="Saúde">
+                <option value="SauS">Serviço</option>
+                <option value="SauP">Produto</option>
+                <option value="SauA">Serviço e Produto</option>
+   </optgroup>
+   <optgroup label="Recursos Humanos">
+   				<option value="RHS">Serviço</option>
+                <option value="RHP">Produto</option>
+                <option value="RHA">Serviço e Produto</option>
+   </optgroup>
+   <optgroup label="Tecnologia">
+   				<option value="TecS">Serviço</option>
+                <option value="TecP">Produto</option>
+                <option value="TecA">Serviço e Produto</option>
+   </optgroup>
+   <optgroup label="Marketing">
+   				<option value="MarS">Serviço</option>
+                <option value="MarP">Produto</option>
+                <option value="MarA">Serviço e Produto</option>
+   </optgroup>
+   <optgroup label="Mídias">
+   				<option value="MidS">Serviço</option>
+                <option value="MidP">Produto</option>
+                <option value="MidA">Serviço e Produto</option>
+   </optgroup>
+   <optgroup label="Viagens">
+   				<option value="ViaS">Serviço</option>
+                <option value="ViaP">Produto</option>
+                <option value="ViaA">Serviço e Produto</option>
+   </optgroup>
+   <optgroup label="Imobiliária">
+   				<option value="ImoS">Serviço</option>
+                <option value="ImoP">Produto</option>
+                <option value="ImoA">Serviço e Produto</option>
+   </optgroup>
+   <optgroup label="Aplicativos Web">
+   				<option value="ApiS">Serviço</option>
+                <option value="ApiP">Produto</option>
+                <option value="ApiA">Serviço e Produto</option>
+   </optgroup>
+	</select>
+	</p>
+    <p><label for="iQuantidade">Quantidade de visitantes mensal no site:</label><input type="number" name="nQuantidade" id="iQuantidade" min="0" max="1000000000" value="0"/></p>
+    <p><label for="iTotal">Média de Leads: </label>
+    <input type="text" name="nTotal" id="iTotal" placeholder="0" readonly></p>
+</fieldset>
+</form>
+</html>
